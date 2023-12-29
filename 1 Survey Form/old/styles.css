@@ -1,0 +1,109 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* This trick was taken from the FCC tribute project example:
+		 Setting a base font size of 10px give us easier rem calculations
+     Info: 1rem === 10px, 1.5rem === 15px, 2rem === 20px and so forth
+   */
+  font-size: 10px;
+}
+
+body {
+  background: linear-gradient(15deg, #2fab84, #2f56ab);
+  font-family: Verdana, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  text-align: center;
+  color: #000024;
+  padding: 0;
+}
+
+#header {
+  background: rgba(47, 171, 70, 0.6);
+  max-width: 50vw;
+  min-width: 33vw;
+  margin: auto;
+  border-radius: 1rem;
+  padding: 0.25rem;
+}
+
+#title {
+  /* Nice backlight taken from codepen.io/hirokoba/pen/bGYdaKW */
+  text-shadow: white 0.1rem 0.1rem 1rem, white -0.1rem 0.1rem 1rem, white 0.1rem -0.1rem 1rem,
+    white -0.1rem -0.1rem 1rem;
+}
+
+#description {
+  font-style: italic;
+  text-shadow: white 0.1rem 0.1rem 1rem, white -0.1rem 0.1rem 1rem, white 0.1rem -0.1rem 1rem,
+    white -0.1rem -0.1rem 1rem;
+}
+
+#main {
+  background: rgba(148, 171, 47, 0.6);
+  max-width: 33vw;
+  min-width: 33vw;
+  margin: auto;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+#survey-form {
+  margin: 2rem;
+}
+
+label {
+  display: block;
+  text-align: left;
+}
+
+#name-label,
+#email-label,
+#number-label,
+#level-label,
+#comments-label {
+  line-height: 2;
+  padding: 0.3rem;
+  margin: 0.3rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+#dropdown,
+textarea {
+  display: block;
+  width: 100%;
+  margin: auto;
+  text-align: left;
+  font-family: inherit;
+}
+
+fieldset {
+  margin: 1.5rem auto 1.5rem auto;
+  padding: 0;
+  border: 0;
+}
+
+#submit {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background: rgb(224, 192, 64);
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-width: 1px;
+  border-color: #000024;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.control {
+  border-radius: 4px;
+}

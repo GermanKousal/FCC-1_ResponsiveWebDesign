@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+  <title>Millenary zen Coding Temple apprentice request form</title>
+</head>
+
+<body>
+
+  <header id="header">
+    <h1 id="title">Join the coding competition!</h1>
+    <p id="description">If you are a coding cat willing to participate in our next "Fish & Coding Weeekend", please sign
+      up.</p>
+  </header>
+
+  <main id="main">
+    <form id="survey-form">
+      <label id="name-label">
+        Name *
+        <input type="text" id="name" name="name" placeholder="Enter your name" class="control" required />
+      </label>
+      <label id="email-label">
+        Email *
+        <input type="email" id="email" name="email" placeholder="Enter your Email" class="control" required />
+      </label>
+      <label id="number-label">
+        Age (optional)
+        <input type="number" id="number" name="age" placeholder="Enter your age" class="control" min="13" max="105" />
+      </label>
+      <label id="level-label">
+        Select your coding level *
+        <select name="coding-level" id="dropdown" class="control" required>
+          <option disabled selected value>Select your coding level</option>
+          <option value="kitten">Kitten (beginner)</option>
+          <option value="cat">Cat (intermediate)</option>
+          <option value="tiger">Tiger (advanced)</option>
+        </select>
+      </label>
+      <fieldset>
+        <legend>Which languages do you code in?</legend>
+        <label><input id="html5" type="checkbox" name="languages" value="html5">HTML5</label>
+        <label><input id="css3" type="checkbox" name="languages" value="css3">CSS3</label>
+        <label><input id="javascript" type="checkbox" name="languages" value="javascript">JavaScript</label>
+        <label><input id="other" type="checkbox" name="languages" value="other">Other</label>
+      </fieldset>
+      <fieldset>
+        <legend>Choose your meal</legend>
+        <label><input id="tuna" type="radio" name="meal" value="tuna" checked>Tuna</label>
+        <label><input id="milk" type="radio" name="meal" value="milk">Milk</label>
+        <label><input id="lasagna" type="radio" name="meal" value="lasagna">Lasagna</label>
+      </fieldset>
+      <label id="comments-label">
+        Anything else you want to add?
+        <textarea rows="2" cols="30" name="comments" id="comments" class="control"
+          placeholder="Add more details to your inscription..."></textarea>
+      </label>
+      <button type="submit" id="submit" class="submit-button">Submit</button>
+    </form>
+  </main>
+  <footer>
+    <p>View original version on codepen <a href="https://codepen.io/Kousal/pen/zYPzKEa">here</a></p>
+  </footer>
+</body>
+
+</html>
