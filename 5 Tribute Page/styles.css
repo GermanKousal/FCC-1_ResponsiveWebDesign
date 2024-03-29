@@ -156,7 +156,7 @@ img {
   align-items: center;
   width: 100%;
   height: 100vh;
-  background-color: #000;
+  background-color: var(--main-dark);
   background-image: linear-gradient(15deg, var(--main-dark) 0%, var(--main-mid-light) 100%);
 }
 
@@ -164,7 +164,7 @@ img {
   font-size: 3rem;
   font-weight: 200;
   font-style: italic;
-  color: var(--main-mid);
+  color: var(--main-mid-light);
 }
 
 /* Projects section */
