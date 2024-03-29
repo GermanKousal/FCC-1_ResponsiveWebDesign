@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Technical Documentation Page</title>
+</head>
+
+<body>
+  <nav id="navbar">
+    <header>
+      <h1>C# crash course</h1>
+    </header>
+    <ul>
+      <li class="navbar-item"><a href="#Introduction" class="nav-link">Introduction</a></li>
+      <li class="navbar-item"><a href="#Dangerous_C" class="nav-link">Dangerous C</a></li>
+      <li class="navbar-item"><a href="#Safe_C-sharp" class="nav-link">Safe C-sharp</a></li>
+      <li class="navbar-item"><a href="#C-sharp_and_Objects" class="nav-link">C-sharp and Objects</a></li>
+      <li class="navbar-item"><a href="#A_first_C-sharp_Program" class="nav-link">A first C-sharp Program</a></li>
+      <li class="navbar-item"><a href="#Punctuation" class="nav-link">Punctuation</a></li>
+      <li class="navbar-item"><a href="#Variables_and_Data" class="nav-link">Variables and Data</a></li>
+      <li class="navbar-item"><a href="#Storing_numbers" class="nav-link">Storing numbers</a></li>
+      <li class="navbar-item"><a href="#Storing_integer_values" class="nav-link">Storing integer values</a></li>
+      <li class="navbar-item"><a href="#Storing_real_values" class="nav-link">Storing real values</a></li>
+      <li class="navbar-item"><a href="#Reference" class="nav-link">Reference</a></li>
+    </ul>
+  </nav>
+  <main id="main-doc">
+    <section class="main-section" id="Introduction">
+      <header>
+        <h2>Introduction</h2>
+      </header>
+      <p>We are going to learn a language called C# (pronounced C sharp). If you ever make the mistake of calling the
+        language C hash you will show your ignorance straight away! C# is a very flexible and powerful programming
+        language with an interesting history. It was developed by Microsoft Corporation for a variety of reasons, some
+        technical, some political and others marketing.
+      </p>
+      <p>C# bears a strong resemblance to the C++ and Java programming languages, having borrowed (or improved) features
+        provided by these languages. The origins of both Java and C++ can be traced back to a language called C, which
+        is a highly dangerous and entertaining language which was invented in the early 1970s. C is famous as the
+        language the UNIX operating system was written in, and was specially designed for this.
+      </p>
+    </section>
+    <section class="main-section" id="Dangerous_C">
+      <header>
+        <h2>Dangerous C</h2>
+      </header>
+      <p>I referred to C as a dangerous language. So what do I mean by that? Consider the chain saw. If I, Rob Miles,
+        want to use a chainsaw I will hire one from a shop. As I am not an experienced chain saw user I would expect it
+        to come with lots of built in safety features such as guards and automatic cut outs. These will make me much
+        safer with the thing but will probably limit the usefulness of the tool, i.e. because of all the safety stuff I
+        might not be able to cut down certain kinds of tree. If I was a real lumberjack I would go out and buy a
+        professional chainsaw which has no safety features whatsoever but can be used to cut down most anything. If I
+        make a mistake with the professional tool I could quite easily lose my leg, something the amateur machine would
+        not let happen.</p>
+      <ul>
+        <li>In programming terms what this means is that C lacks some safety features provided by other programming
+          languages. This makes the language much more flexible.</li>
+        <li>However, if I do something stupid C will not stop me, so I have a much greater chance of crashing the
+          computer with a C program than I do with a safer language.</li>
+      </ul>
+    </section>
+    <section class="main-section" id="Safe_C-sharp">
+      <header>
+        <h2>Safe C-sharp</h2>
+      </header>
+      <p>The C# language attempts to get the best of both worlds in this respect. A C# programcan contain managed or
+        unmanaged parts. The managed code is fussed over by the system which runs it. This makes sure that it is hard
+        (but probably not impossible) to crash your computer running managed code. However, all this fussing comes at a
+        price, causing your programs to run more slowly.</p>
+      <p>To get the maximum possible performance, and enable direct access to parts of the underlying computer system,
+        you can mark your programs as unmanaged. An unmanaged program goes faster, but if it crashes it is capable of
+        taking the computer with it. Switching to unmanaged mode is analogous to removing the guard from your new
+        chainsaw because it gets in the way.</p>
+      <ul>
+        <li>C# is a great language to start learning with as the managed parts will make it easier for you to understand
+          what has happened when your programs go wrong.</li>
+      </ul>
+    </section>
+    <section class="main-section" id="C-sharp_and_Objects">
+      <header>
+        <h2>C-sharp and Objects</h2>
+      </header>
+      <p>The C# language is object oriented. Objects are an organisational mechanism which let you break your program
+        down into sensible chunks, each of which is in charge of part of the overall system. Object Oriented Design
+        makes large projects much easier to design, test and extend. It also lets you create programs which can have a
+        high degree of reliability and stability.</p>
+      <p>I am very keen on object oriented programming, but I am not going to tell you much about it just yet. This is
+        not because I don't know much about it (honest) but because I believe that there are some very fundamental
+        programming issues which need to be addressed before we make use of objects in our programs.</p>
+      <ul>
+        <li>The use of objects is as much about design as programming, and we have to know how to program before we can
+          design larger systems.</li>
+      </ul>
+    </section>
+    <section class="main-section" id="A_first_C-sharp_Program">
+      <header>
+        <h2>A first C-sharp Program</h2>
+      </header>
+      <p>The first program that we are going to look at will read in the width and height of a window and then print out
+        the amount of wood and glass required to make a window that will fit in a hole of that size.</p>
+      <p>Perhaps the best way to start looking at C# is to jump straight in with our first ever C# program. Here it is:
+      </p>
+      <p class="code">
+        <code>
+<!--	 -->using System;
+<!--	 -->
+<!--	 -->class GlazerCalc
+<!--	 -->{
+<!--	 -->  static void Main()
+<!--	 -->  {
+<!--	 -->    double width, height, woodLength, glassArea;
+<!--	 -->    string widthString, heightString;
+<!--	 -->				
+<!--	 -->    widthString = Console.ReadLine();
+<!--	 -->    width = double.Parse(widthString);
+<!--	 -->				
+<!--	 -->    heightString = Console.ReadLine();
+<!--	 -->    height = double.Parse(heightString);
+<!--	 -->				
+<!--	 -->    woodLength = 2 * ( width + height ) * 3.25 ;
+<!--	 -->				
+<!--	 -->    glassArea = 2 * ( width * height ) ;
+<!--	 -->				
+<!--	 -->    Console.WriteLine ( "The length of the wood is " + woodLength + " feet" ) ;
+<!--	 -->    Console.WriteLine( "The area of the glass is " + glassArea + " square metres" ) ;
+<!--	 -->  }
+<!--	 -->}
+    </code>
+      </p>
+      <p>This is a valid program. If you gave it to a C# compiler it would compile, and you could run it. The actual
+        work is done by the two lines that I have highlighted. Broadly speaking the stuff before these two lines is
+        concerned with setting things up and getting the values in to be processed. The stuff after the two lines is
+        concerned with displaying the answer to the user.</p>
+    </section>
+    <section class="main-section" id="Punctuation">
+      <header>
+        <h2>Punctuation</h2>
+      </header>
+      <p>That marks the end of our program. One of the things that you will have noticed is that there is an awful lot
+        of punctuation in there. This is vital and must be supplied exactly as C# wants it, otherwise you will get what
+        is called a compilation error. This simply indicates that the compiler is too stupid to make sense of what you
+        have given it!</p>
+      <p>You will quickly get used to hunting for and spotting compilation errors. One of the things you will find is
+        that the compiler does not always detect the error where it takes place; consider the effect of missing out a
+        "(" character. However, note that just because the compiler reckons your program is OK is no guarantee of it
+        doing what you want!</p>
+      <p>Another thing to remember is that the layout of the program does not bother the
+        compiler, the following is just as valid:</p>
+      <p class="code">
+        <code>
+<!-- -->using System;class GlazerCalc{static void Main(){double width, height, woodLength, glassArea;string widthString, heightString;widthString = Console.ReadLine();width = double.Parse(widthString);heightString = Console.ReadLine();height = double.Parse(heightString);woodLength = 2 * ( width + height ) * 3.25 ;glassArea = 2 * ( width * height ) ;Console.WriteLine ("The length of the wood is " + woodLength + " feet" ) ;Console.WriteLine("The area of the glass is " + glassArea + " square metres" ) ;}}
+    </code>
+      </p>
+      <p>...although if anyone writes a program which is laid out this way they will get a smart rap on the knuckles
+        from me!</p>
+    </section>
+    <section class="main-section" id="Variables_and_Data">
+      <header>
+        <h2>Variables and Data</h2>
+      </header>
+      <p>In the glazing program above we decided to hold the width and the height of the windows that we are working on
+        in variables that we described as double. Before we can go much further in our programming career we need to
+        consider just what this means, and what other types of data we can store in programs that we write.</p>
+      <p>Programs operate on data. A programming language must give you a way of storing the data you are processing,
+        otherwise it is useless. What the data actually means is something that you as a programmer decide (see the
+        above digression on data).</p>
+      <p>A variable is a named location where you can store something. You can think of it as a box of a particular size
+        with a name painted on the box. You chose the name to reflect what is going to be stored there (we used sensible
+        names like woodLength in the above program). You also need to choose the type of the variable (particular size
+        and shape of box) from the range of storage types which C# provides. The type of the variable is part of the
+        metadata about that variable.</p>
+      <p>Programs also contain literal values. A literal value is just a value in your program
+        which you use for some purpose. For each type of variable the C# language has a way
+        in which literal values of that type are expressed.</p>
+    </section>
+    <section class="main-section" id="Storing_numbers">
+      <header>
+        <h2>Storing numbers</h2>
+      </header>
+      <p>When considering numeric values there are two kinds of data:</p>
+      <ul>
+        <li>Nice chunky individual values, for example the number of sheep in a field, teeth on a cog, apples in a
+          basket. These are referred to as integers.</li>
+        <li>Nasty real world type things, for example the current temperature, the length of a piece of string, the
+          speed of a car. These are referred to as reals.</li>
+      </ul>
+      <p>In the first case we can hold the value exactly; you always have an exact number of these items, they are
+        integral.</p>
+      <p>In the second case we can never hold what we are looking at exactly. Even if you measure a piece of string to
+        100 decimal places it is still not going to give you its exact length - you could always get the value more
+        accurately. These are real. A computer is digital, i.e. it operates entirely on patterns of bits which can be
+        regarded as numbers. Because we know that it works in terms of ons and offs it has problems holding real values.
+        To handle real values the computer actually stores them to a limited accuracy, which we hope is adequate (and
+        usually is).</p>
+      <p>This means that when we want to store something we have to tell the computer whether it is an integer or a
+        real. We also need to consider the range of possible values that we need to hold so that we can choose the
+        appropriate type to store the data.</p>
+      <p>You tell C# about a variable you want to create by declaring it. The declaration also identifies the type of
+        the thing we want to store. Think of this as C# creating a box of a particular size, specifically designed to
+        hold items of the given type. The box is tagged with some metadata (there is that word again) so that the system
+        knows what can be put into it and how that box can be used.</p>
+    </section>
+    <section class="main-section" id="Storing_integer_values">
+      <header>
+        <h2>Storing integer values</h2>
+      </header>
+      <p>Integers are the easiest type of value for the computer to store. Each value will map onto a particular pattern
+        of bits. The only issue is one of range. The bigger the value the larger the number of bits that you need to
+        represent it.</p>
+      <p>An example of an integer variable would be something which kept track of the number of sheep in a field:</p>
+      <p class="code"><code>int numberOfSheep = 0;</code></p>
+      <p>This creates a variable which could keep track of over two thousand million sheep! It also sets the initial
+        value to 0. Using int (which can hold negative values) lets a program manipulate "negative sheep" which is
+        probably not meaningful (unless you run a sheep bank of course and let people borrow them). Remember that the
+        language itself is unaware of any such considerations. If you want to make sure that we never have more than
+        1,000 sheep and the number of sheep never goes negative you must add this behaviour yourself.</p>
+    </section>
+    <section class="main-section" id="Storing_real_values">
+      <header>
+        <h2>Storing real values</h2>
+      </header>
+      <p>"Real" is a generic term for numbers which are not integers. They have a decimal point and a fractional part.
+        Depending on the value the decimal point floats around in the number, hence the name float.
+        C# provides a type of box which can hold a real number. A standard float value has a range of 1.5E-45 to 3.4E48
+        with a precision of only 7 digits (i.e. not as good as most pocket calculators).</p>
+      <p>If you want more precision (although of course your programs will use up more computer memory and run more
+        slowly) you can use a double box instead (double is an abbreviation for double precision). This takes up more
+        computer memory but it has a range of 5.0E-324 to 1.7E308 and a precision of 15 digits.</p>
+      <p>An example of a float variable could be something which held the average price of ice cream:</p>
+      <p class="code"><code>float averageIceCreamPriceInPence;</code></p>
+      <p>An example of a double variable could be something which held the width of the universe in inches:</p>
+      <p class="code"><code>double univWidthInInches;</code></p>
+      <p>Finally, if you want the ultimate in precision but require a slightly smaller range you can use the decimal
+        type. This uses twice the storage space of a double and holds values to a precision of 28-29 digits. It is used
+        in financial calculations where the numbers are not so large but they need to be held to very high accuracy.</p>
+      <p class="code"><code>decimal robsOverdraft;</code></p>
+    </section>
+    <section class="main-section" id="Reference">
+      <header>
+        <h2>Reference</h2>
+      </header>
+      <p>All the information from this page is taken from <a href="https://www.robmiles.com/c-yellow-book"
+          target="_blank">Rob Miles' C# yellow book</a>.</p>
+    </section>
+  </main>
+</body>
+
+</html>
