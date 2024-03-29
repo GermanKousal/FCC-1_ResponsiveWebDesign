@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+  <title>Millenary zen Coding Temple apprentice request form</title>
+</head>
+
+<body>
+  <header>
+    <h1 id="title">Welcome to the zen coding Temple</h1>
+    <p id="description" class="description">Welcome grasshopper, here you'll be enlightened by the wisdom of coding
+      gurus.</p>
+    <p id="description-2" class="description">Fill in the form to start the <strong>coder's path of mastery</strong>.
+    </p>
+  </header>
+  <main>
+    <form id="survey-form">
+      <fieldset>
+        <label for="name" id="name-label" class="title-sentence">Apprentice's name:</label> <input type="text" id="name"
+          class="control" placeholder="How should the apprentice be addressed" required>
+        <label for="email" id="email-label" class="title-sentence">Apprentice's email:</label> <input type="email"
+          id="email" class="control" placeholder="How should the apprentice be contacted" required>
+        <label for="number" id="number-label" class="title-sentence">Apprentice's age:</label> <input type="number"
+          id="number" class="control" min="13" max="120"
+          placeholder="How many earth's cycles around the sun the apprentice has seen">
+        <label for="dropdown" id="dropdown-label" class="title-sentence">Apprentice's wisdom:</label>
+        <select id="dropdown" class="control">
+          <option disabled selected value>Apprentice's coding level</option>
+          <option value="beginner">Coder kitten (beginner)</option>
+          <option value="intermediate">Programming Ninja (intermediate)</option>
+          <option value="advanced">Binary Buda (advanced)</option>
+        </select>
+      </fieldset>
+
+      <fieldset class="selector-container">
+        <legend class="fieldset-legend">Would the apprentice sleep inside our closter?</legend>
+        <div class="selector">
+          <input type="radio" id="campus-yes" value="campus-yes" name="campus" class="selector-input">
+          <label for="campus-yes" id="campus-yes-label" class="selector-text">Yes</label>
+        </div>
+        <div class="selector">
+          <input type="radio" id="campus-no" value="campus-no" name="campus" class="selector-input">
+          <label for="campus-no" id="campus-no-label" class="selector-text">No</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="selector-container">
+        <legend class="fieldset-legend">Your path so far:</legend>
+        <div class="selector">
+          <input id="html" type="checkbox" name="languages" value="html" class="selector-input">
+          <label for="html" id="html-label" class="selector-text">HTML</label>
+        </div>
+        <div class="selector">
+          <input id="css" type="checkbox" name="languages" value="css" class="selector-input">
+          <label for="css" id="css-label" class="selector-text">CSS</label>
+        </div>
+        <div class="selector">
+          <input id="javascript" type="checkbox" name="languages" value="javascript" class="selector-input">
+          <label for="javascript" id="javascript-label" class="selector-text">Javascript</label>
+        </div>
+        <div class="selector">
+          <input id="other" type="checkbox" name="languages" value="other" class="selector-input">
+          <label for="other" id="other-label" class="selector-text">Other</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend id="comments-legend" class="fieldset-legend">Introspective light:</legend>
+        <textarea rows="2" col="30" id="comments" class="control"
+          placeholder="When you look inside yourself, tell us what you see..."></textarea>
+      </fieldset>
+
+      <input type="submit" id="submit" value="Submit">
+    </form>
+  </main>
+  <footer>
+    <p>View 2022 version <a href="./old/index.html">here</a></p>
+  </footer>
+</body>
+
+</html>

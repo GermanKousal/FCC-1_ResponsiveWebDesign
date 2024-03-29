@@ -1,0 +1,164 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* This trick was taken from the FCC tribute project example:
+		 Setting a base font size of 10px give us easier rem calculations
+     Info: 1rem === 10px, 1.5rem === 15px, 2rem === 20px and so forth
+  */
+  font-size: 10px;
+}
+
+/*
+    The lush color palette
+    LakeBottom: #1d3a4d;
+    DeepMorado: #6a2153;
+    SlowSilver: #b4a7af;
+    StronCream: #f5e2de;
+    Hexzarcoal: #eaeaea;
+    DarkLakeBottom: #162939;
+    DarkDeepMorado: #3f122f;
+    DarkSlowSilver: #9f8f99;
+    DarkStronCream: #dfccc5;
+    DarkHexzarcoal: #d4d6d5;
+*/
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to top, #3f122f, #162939);
+  color: #eaeaea;
+  font-size: 2.5rem;
+  font-family: 'Calibri', 'Arial', sans-serif;
+  line-height: 2.5rem;
+  text-align: center;
+}
+
+#header {
+  max-width: 50vw;
+  min-width: 33vw;
+}
+
+#title {
+  /* Nice backlight taken from codepen.io/hirokoba/pen/bGYdaKW */
+  text-shadow: #9f8f99 0.1rem 0.1rem 2.5rem, #9f8f99 -0.1rem 0.1rem 2.5rem, #9f8f99 0.1rem -0.1rem 2.5rem,
+    #9f8f99 -0.1rem -0.1rem 2.5rem;
+  font-size: 6rem;
+}
+
+.description {
+  font-style: italic;
+  line-height: 2.5rem;
+}
+
+main {
+  background: #1d3a4d;
+  max-width: 33vw;
+  min-width: 33vw;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  padding-top: 0;
+}
+
+#survey-form {
+  margin: 0.5rem;
+}
+
+label {
+  display: block;
+  text-align: left;
+}
+
+.title-sentence {
+  line-height: 5rem;
+  padding: 0rem;
+  margin: 0rem;
+  margin-top: 1rem;
+}
+
+.fieldset-legend {
+  line-height: 5rem;
+  padding: 0rem;
+  margin: 0rem;
+  margin-top: 0rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+#dropdown,
+textarea {
+  display: block;
+  width: 100%;
+  margin: auto;
+  text-align: left;
+  font-family: inherit;
+  resize: none;
+  font-size: 2rem;
+}
+
+input,
+input::placeholder {
+  font-size: 2rem;
+}
+
+fieldset {
+  margin: 1.5rem auto 1.5rem auto;
+  padding: 0;
+  border: 0;
+}
+
+#submit {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  color: #f5e2de;
+  background-color: #6a2153;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-width: 1px;
+  border-color: #000024;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.control {
+  border-radius: 5px;
+}
+
+.selector {
+  text-align: left;
+  line-height: 3rem;
+  padding-left: 1rem;
+}
+
+.selector-text {
+  display: inline-block;
+  font-size: 2rem;
+}
+
+.selector-input {
+  height: 1.7rem;
+  line-height: 1.7rem;
+  display: inline-block;
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+footer {
+  font-size: 2rem;
+}
+
+footer a {
+  color: #f5e2de;
+}
