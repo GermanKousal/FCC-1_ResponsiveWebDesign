@@ -30,16 +30,16 @@
   --logo-9: #381e0e;
 */
 
-  --logo-0: #e7bca1;
-  --logo-1: #dfa885;
-  --logo-2: #d89368;
-  --logo-3: #d17f4c;
-  --logo-4: #c66b33;
-  --logo-5: #aa5c2b;
-  --logo-6: #8d4d24;
-  --logo-7: #713d1d;
-  --logo-8: #552e15;
-  --logo-9: #381e0e;
+  --logo-0: #f0cc97;
+  --logo-1: #ecbd78;
+  --logo-2: #e8ad59;
+  --logo-3: #e39e39;
+  --logo-4: #db8e1e;
+  --logo-5: #bc7a19;
+  --logo-6: #9c6515;
+  --logo-7: #7d5111;
+  --logo-8: #5e3d0c;
+  --logo-9: #3e2808;
 }
 
 
@@ -55,7 +55,7 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
+  font-size: 1vw;
   scroll-behavior: smooth;
 }
 
@@ -67,41 +67,25 @@ html {
  * it will affect all properties using rem units for the values.
 */
 
-/* I am using the em unit for breakpoints
- * The calculation is the following
- * screen size divided by browser base font size
- * As an example: a breakpoint at 980px
- * 980px / 16px = 61.25em
-*/
-
-/* 1200px / 16px = 75em */
-@media (max-width: 75em) {
+@media (width>=1200px) {
   html {
-    font-size: 60%;
+    font-size: 12px;
   }
 }
 
-/* 980px / 16px = 61.25em */
-@media (max-width: 61.25em) {
+@media (width<=900px) {
   html {
-    font-size: 58%;
+    font-size: 9px;
   }
 }
 
-/* 460px / 16px = 28.75em */
-@media (max-width: 28.75em) {
-  html {
-    font-size: 55%;
-  }
-}
 
 /* Base styles */
 
 body {
   font-family: 'Verdana', sans-serif;
-  font-size: 1.8rem;
+  font-size: 1rem;
   font-weight: 400;
-  line-height: 1.4;
   color: var(--main-light);
 }
 
@@ -150,28 +134,32 @@ img {
 
 .nav-list {
   display: flex;
+  align-items: center;
   margin-right: 2rem;
 }
 
-@media (max-width: 28.75em) {
+@media (width<=600px) {
   .nav {
-    justify-content: center;
+    justify-content: space-evenly;
   }
 
   .nav-list {
-    margin: 0 1rem;
+    margin: 0 5rem;
   }
 }
 
 .nav-list a {
   display: block;
   font-size: 2.2rem;
-  padding: 2rem;
+  height: 100%;
+  margin: auto;
+  padding: 2.7rem 1.5rem;
 }
 
 .nav-list a:hover {
   color: var(--logo-0);
   background-color: var(--main-dark);
+  background-image: linear-gradient(0deg, var(--main-mid-dark) 0%, var(--main-mid-dark) 20%, var(--main-dark) 40%, var(--main-dark) 60%, var(--main-mid-dark) 80%, var(--main-mid-dark) 100%);
 }
 
 /* Welcome section */
@@ -191,7 +179,7 @@ img {
   font-family: 'Garamond', sans-serif;
   font-size: 10rem;
   font-style: italic;
-  color: #ffd700;
+  color: var(--logo-1);
 }
 
 .welcome-section>p {
@@ -202,46 +190,16 @@ img {
   color: var(--main-mid-light);
 }
 
-.logo-0 {
-  color: var(--logo-9);
-}
+@media (width<=600px) {
+  .welcome-section>h1 {
+    font-size: 8.2rem;
+  }
 
-.logo-1 {
-  color: var(--logo-8);
+  .welcome-section>p {
+    font-size: 3.3rem;
+    font-weight: 400;
+  }
 }
-
-.logo-2 {
-  color: var(--logo-7);
-}
-
-.logo-3 {
-  color: var(--logo-6);
-}
-
-.logo-4 {
-  color: var(--logo-6);
-}
-
-.logo-5 {
-  color: var(--logo-6);
-}
-
-.logo-6 {
-  color: var(--logo-4);
-}
-
-.logo-7 {
-  color: var(--logo-4);
-}
-
-.logo-8 {
-  color: var(--logo-3);
-}
-
-.logo-9 {
-  color: var(--logo-2);
-}
-
 
 /* Projects section */
 
