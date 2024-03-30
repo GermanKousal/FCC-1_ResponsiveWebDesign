@@ -5,7 +5,43 @@
   --main-mid: #9ba8ae;
   --main-mid-dark: #707a7e;
   --main-dark: #495054;
+
+  /*
+  --logo-0: #f0cc97;
+  --logo-1: #ecbd78;
+  --logo-2: #e8ad59;
+  --logo-3: #e39e39;
+  --logo-4: #db8e1e;
+  --logo-5: #bc7a19;
+  --logo-6: #9c6515;
+  --logo-7: #7d5111;
+  --logo-8: #5e3d0c;
+  --logo-9: #3e2808;
+  
+  --logo-0: #e7bca1;
+  --logo-1: #dfa885;
+  --logo-2: #d89368;
+  --logo-3: #d17f4c;
+  --logo-4: #c66b33;
+  --logo-5: #aa5c2b;
+  --logo-6: #8d4d24;
+  --logo-7: #713d1d;
+  --logo-8: #552e15;
+  --logo-9: #381e0e;
+*/
+
+  --logo-0: #e7bca1;
+  --logo-1: #dfa885;
+  --logo-2: #d89368;
+  --logo-3: #d17f4c;
+  --logo-4: #c66b33;
+  --logo-5: #aa5c2b;
+  --logo-6: #8d4d24;
+  --logo-7: #713d1d;
+  --logo-8: #552e15;
+  --logo-9: #381e0e;
 }
+
 
 /* Base reset */
 *,
@@ -62,9 +98,8 @@ html {
 /* Base styles */
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Verdana', sans-serif;
   font-size: 1.8rem;
-  /* 18px */
   font-weight: 400;
   line-height: 1.4;
   color: var(--main-light);
@@ -72,7 +107,7 @@ body {
 
 h1,
 h2 {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Verdana', sans-serif;
   font-weight: 700;
   text-align: center;
 }
@@ -135,7 +170,7 @@ img {
 }
 
 .nav-list a:hover {
-  color: var(--main-mid-light);
+  color: var(--logo-0);
   background-color: var(--main-dark);
 }
 
@@ -152,12 +187,61 @@ img {
   background-image: linear-gradient(15deg, var(--main-dark) 0%, var(--main-mid-light) 100%);
 }
 
-.welcome-section>p {
-  font-size: 3rem;
-  font-weight: 200;
+.welcome-section>h1 {
+  font-family: 'Garamond', sans-serif;
+  font-size: 10rem;
   font-style: italic;
+  color: #ffd700;
+}
+
+.welcome-section>p {
+  font-size: 6rem;
+  font-weight: 200;
+  font-style: normal;
+  font-family: 'Courier New', monospace;
   color: var(--main-mid-light);
 }
+
+.logo-0 {
+  color: var(--logo-9);
+}
+
+.logo-1 {
+  color: var(--logo-8);
+}
+
+.logo-2 {
+  color: var(--logo-7);
+}
+
+.logo-3 {
+  color: var(--logo-6);
+}
+
+.logo-4 {
+  color: var(--logo-6);
+}
+
+.logo-5 {
+  color: var(--logo-6);
+}
+
+.logo-6 {
+  color: var(--logo-4);
+}
+
+.logo-7 {
+  color: var(--logo-4);
+}
+
+.logo-8 {
+  color: var(--logo-3);
+}
+
+.logo-9 {
+  color: var(--logo-2);
+}
+
 
 /* Projects section */
 
