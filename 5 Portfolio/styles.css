@@ -400,6 +400,7 @@ footer a {
   color: var(--logo-0);
   text-shadow: var(--main-dark) 0.1rem 0.1rem 2.5rem, var(--main-dark) -0.1rem -0.1rem 2.5rem;
   transition: color 0.3s ease-out, text-shadow 0.3s ease-out;
+
 }
 
 footer a:hover {
